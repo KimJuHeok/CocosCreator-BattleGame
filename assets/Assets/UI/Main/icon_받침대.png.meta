@@ -1,0 +1,31 @@
+{
+  "ver": "2.2.0",
+  "uuid": "0c8d08f3-7b4a-4e11-8dbf-c9bbc7f5fa83",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "subMetas": {
+    "icon_받침대": {
+      "ver": "1.0.3",
+      "uuid": "a84e5c89-09ad-4cef-9d36-643aeaa74a52",
+      "rawTextureUuid": "0c8d08f3-7b4a-4e11-8dbf-c9bbc7f5fa83",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 122,
+      "height": 46,
+      "rawWidth": 122,
+      "rawHeight": 46,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
