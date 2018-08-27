@@ -12,7 +12,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Character_Ally",
+    "_name": "HealthBar",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -24,90 +24,17 @@
     "_level": 1,
     "_components": [
       {
-        "__id__": 10
+        "__id__": 5
       },
-      {
-        "__id__": 11
-      },
-      {
-        "__id__": 12
-      }
-    ],
-    "_prefab": {
-      "__id__": 13
-    },
-    "_opacity": 255,
-    "_color": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_contentSize": {
-      "__type__": "cc.Size",
-      "width": 633,
-      "height": 762
-    },
-    "_anchorPoint": {
-      "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
-    },
-    "_position": {
-      "__type__": "cc.Vec3",
-      "x": -517,
-      "y": -394,
-      "z": 0
-    },
-    "_scale": {
-      "__type__": "cc.Vec3",
-      "x": 0.8,
-      "y": 0.8,
-      "z": 1
-    },
-    "_rotationX": 0,
-    "_rotationY": 0,
-    "_quat": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_skewX": 0,
-    "_skewY": 0,
-    "_localZOrder": 88,
-    "groupIndex": 0,
-    "_id": ""
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "HealthBar",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 1
-    },
-    "_children": [
-      {
-        "__id__": 3
-      }
-    ],
-    "_active": true,
-    "_level": 2,
-    "_components": [
       {
         "__id__": 6
       },
       {
         "__id__": 7
-      },
-      {
-        "__id__": 8
       }
     ],
     "_prefab": {
-      "__id__": 9
+      "__id__": 8
     },
     "_opacity": 255,
     "_color": {
@@ -129,13 +56,13 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 243,
-      "y": -110,
+      "x": 222.4,
+      "y": 528.6,
       "z": 0
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 1.5,
+      "x": 1,
       "y": 3,
       "z": 1
     },
@@ -150,7 +77,7 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 91,
+    "_localZOrder": 24,
     "groupIndex": 0,
     "_id": ""
   },
@@ -159,18 +86,18 @@
     "_name": "HP",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 2
+      "__id__": 1
     },
     "_children": [],
     "_active": true,
     "_level": 0,
     "_components": [
       {
-        "__id__": 4
+        "__id__": 3
       }
     ],
     "_prefab": {
-      "__id__": 5
+      "__id__": 4
     },
     "_opacity": 255,
     "_color": {
@@ -222,7 +149,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 3
+      "__id__": 2
     },
     "_enabled": true,
     "_srcBlendFactor": 770,
@@ -243,7 +170,7 @@
     "_isTrimmedMode": true,
     "_state": 0,
     "_atlas": null,
-    "_id": "02pewgJm9OOZ74si4G0I3Y"
+    "_id": "1bWvZMbqZAI5d1kIrjFkCd"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -251,9 +178,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "cca38d52-414e-461b-ba2b-7b4f734c885a"
+      "__uuid__": "502e9a07-b7bc-4a12-84c3-1a750d41777f"
     },
-    "fileId": "98BgupB3ZFuY1P0KY+9jcf",
+    "fileId": "117ZM/3jZHJ4ZDIPgY4qYU",
     "sync": false
   },
   {
@@ -261,7 +188,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 2
+      "__id__": 1
     },
     "_enabled": true,
     "_srcBlendFactor": 770,
@@ -282,34 +209,34 @@
     "_isTrimmedMode": true,
     "_state": 0,
     "_atlas": null,
-    "_id": "fcTcr6UZhIVbfdnNi2mT0e"
+    "_id": "097Ks6F09JqbjrwC+ylpjp"
   },
   {
     "__type__": "cc.ProgressBar",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 2
+      "__id__": 1
     },
     "_enabled": true,
     "_N$totalLength": 287,
     "_N$barSprite": {
-      "__id__": 4
+      "__id__": 3
     },
     "_N$mode": 0,
     "_N$progress": 1,
     "_N$reverse": false,
-    "_id": "80aASKF4xO3q7X1CfW7It6"
+    "_id": "a6skjd3RJLRIfG743jR4jI"
   },
   {
     "__type__": "83996DnGxxFA7x5/wvGu2JX",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 2
+      "__id__": 1
     },
     "_enabled": true,
-    "_id": "c3DjdrbidO0p2h7UqZIjKf"
+    "_id": "8bBEAYGmZKqbFKHbJq1u9p"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -317,86 +244,9 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "cca38d52-414e-461b-ba2b-7b4f734c885a"
+      "__uuid__": "502e9a07-b7bc-4a12-84c3-1a750d41777f"
     },
-    "fileId": "96FTIPRwVBVYQTfsLAqBGt",
-    "sync": false
-  },
-  {
-    "__type__": "cc.Sprite",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "_srcBlendFactor": 770,
-    "_dstBlendFactor": 771,
-    "_spriteFrame": {
-      "__uuid__": "61fecf4c-7694-47c7-b58b-4e716fdbfbee"
-    },
-    "_type": 0,
-    "_sizeMode": 1,
-    "_fillType": 0,
-    "_fillCenter": {
-      "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
-    },
-    "_fillStart": 0,
-    "_fillRange": 0,
-    "_isTrimmedMode": true,
-    "_state": 0,
-    "_atlas": null,
-    "_id": "ab8kAkOzlPVI2FatLJjP70"
-  },
-  {
-    "__type__": "cc.Animation",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "_defaultClip": {
-      "__uuid__": "d7fa2071-b4df-42ae-83d4-53d565439e13"
-    },
-    "_clips": [
-      {
-        "__uuid__": "ba8d3806-dddf-4ddb-9103-3ada1d54f27f"
-      },
-      {
-        "__uuid__": "d7fa2071-b4df-42ae-83d4-53d565439e13"
-      }
-    ],
-    "playOnLoad": true,
-    "_id": "75OUL5oedGAJD3tCIM6n1s"
-  },
-  {
-    "__type__": "15627diD5tBO6wnVYCfaaGv",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "HP": 150,
-    "ATKSpeed": 3,
-    "ATKDmg": 3,
-    "CritPer": 10,
-    "CritDmg": 110,
-    "IsAlly": true,
-    "_id": "c32Ff2UX5Kj5lecPH4Gyj5"
-  },
-  {
-    "__type__": "cc.PrefabInfo",
-    "root": {
-      "__id__": 1
-    },
-    "asset": {
-      "__uuid__": "cca38d52-414e-461b-ba2b-7b4f734c885a"
-    },
-    "fileId": "27Oq/Gs8hNU5ZoSSH/YzT8",
+    "fileId": "70Rqmluj1PI6vGUd+RAFGw",
     "sync": false
   }
 ]

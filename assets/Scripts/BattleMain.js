@@ -1,41 +1,47 @@
-// Learn cc.Class:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/class.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/class.html
-// Learn Attribute:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
+
 
 cc.Class({
     extends: cc.Component,
 
     properties: {
-        // foo: {
-        //     // ATTRIBUTES:
-        //     default: null,        // The default value will be used only when the component attaching
-        //                           // to a node for the first time
-        //     type: cc.SpriteFrame, // optional, default is typeof default
-        //     serializable: true,   // optional, default is true
-        // },
-        // bar: {
-        //     get () {
-        //         return this._bar;
-        //     },
-        //     set (value) {
-        //         this._bar = value;
-        //     }
-        // },
+        Ally:{
+            default:null,
+            type:cc.Node,
+        },
+        Enemy:{
+            default:null,
+            type:cc.Node,
+        },
+        maskLayer:{
+            default:null,
+            type:cc.Node,
+        },
+
     },
 
-    // LIFE-CYCLE CALLBACKS:
+
 
     // onLoad () {},
 
     start () {
+        this.AllyComponent = this.Ally.getComponent("CharacterBase");
+        this.EnemyComponent = this.Enemy.getComponent("CharacterBase");
+        this.WinnerLabel = this.maskLayer.getChildByName("WinnerLabel");
 
     },
 
-    // update (dt) {},
+     update (dt) {
+         if( this.AllyComponent.HP < 0 )
+         {
+             this.maskLayer.active = true;
+             this.WinnerLabel.getComponent(cc.Label).string = "Player 2!";
+             cc.game.pause();
+         }
+         if( this.EnemyComponent.HP < 0 )
+         {   
+            this.maskLayer.active = true;
+            this.WinnerLabel.getComponent(cc.Label).string = "Player 1!";
+            cc.game.pause();
+         }
+     },
 });

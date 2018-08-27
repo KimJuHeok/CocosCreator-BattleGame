@@ -17,32 +17,36 @@ cc.Class({
 
 
     start () {
+
         this.scheduleOnce(function() {
             
             this.CheckAllyOrNot();
+            this.HealthBar = this.node.getChildByName("HealthBar").getComponent("HealthBarScript");
+            this.DamageManger = this.EnemyCharacter.node.getChildByName("DamageManager").getComponent("DamageManager");
             this.anim = this.getComponent(cc.Animation);
             this.animState = this.anim.getClips();
             this.animState[1].speed = this.ATKSpeed;
             this.schedule(function() {
                 this.BasicAttack();
             }, 1/this.ATKSpeed);
-
         },3);
+
+
+ 
 
      },
 
      CheckAllyOrNot() {
+
         if(this.IsAlly)
         {
             this.Enemy = cc.find("Canvas/PlayerCharacter/Enemy/Character_Enemy");
             this.EnemyCharacter = this.Enemy.getComponent("CharacterBase");
-            cc.log(this.EnemyCharacter);
         }
         else if(!this.IsAlly)
         {
             this.Enemy = cc.find("Canvas/PlayerCharacter/Ally/Character_Ally");
             this.EnemyCharacter = this.Enemy.getComponent("CharacterBase");
-            cc.log(this.EnemyCharacter);
         }
         else
         {
@@ -51,9 +55,8 @@ cc.Class({
 
     },
     BasicAttack() {
-        this.anim.play('Attack');
-        this.EnemyCharacter.SetHP(this.EnemyCharacter.HP - 
-            (this.ATKDmg + this.getRandom(-1,1) ));
+         this.anim.play('Attack');
+         this.GiveEnemyDamage((this.ATKDmg + this.getRandom(-1,1)));
         if(this.IsAlly)
         {
             cc.log("Allyattacked","EnemyHP",this.EnemyCharacter.HP);
@@ -62,12 +65,29 @@ cc.Class({
         {
             cc.log("Enemyattacked","AllyHP",this.EnemyCharacter.HP);
         }
+
     },
     getRandom(min, max) {
         return Math.floor(Math.random() * (max - min) + min);
       },
+    GiveEnemyDamage(Damage) {
+        if(this.getRandom(1,100) <= this.CritPer)
+        {
+            // Crit 
+            this.EnemyCharacter.SetHP(this.EnemyCharacter.HP - Damage * this.CritDmg/100);
+            this.DamageManger.ShowDamage(Damage *this.CritDmg/100,true);
+        }
+        else
+        {   
+            //Not Crit
+            this.EnemyCharacter.SetHP(this.EnemyCharacter.HP - Damage);
+            this.DamageManger.ShowDamage(Damage,false);
+        }
+
+    },
     SetHP(value)
     {
+        this.HealthBar.UpdateHealthBar();
         this.HP = value;
     },
 
