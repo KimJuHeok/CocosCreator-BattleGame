@@ -21,7 +21,10 @@ cc.Class({
 
 
 
-    // onLoad () {},
+     onLoad () {
+
+
+     },
 
     start () {
         this.AllyComponent = this.Ally.getComponent("CharacterBase");
@@ -35,12 +38,14 @@ cc.Class({
          {
              this.maskLayer.active = true;
              this.WinnerLabel.getComponent(cc.Label).string = "Player 2!";
+             FireBaseDB.ref("Player1").child("Text").set("Fail");
              cc.game.pause();
          }
          if( this.EnemyComponent.HP < 0 )
          {   
             this.maskLayer.active = true;
             this.WinnerLabel.getComponent(cc.Label).string = "Player 1!";
+            FireBaseDB.ref("Player2").child("Text").set("Win");
             cc.game.pause();
          }
      },
