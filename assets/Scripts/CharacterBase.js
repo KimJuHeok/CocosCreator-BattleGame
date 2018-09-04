@@ -24,8 +24,10 @@ cc.Class({
             this.HealthBar = this.node.getChildByName("HealthBar").getComponent("HealthBarScript");
             this.DamageManger = this.EnemyCharacter.node.getChildByName("DamageManager").getComponent("DamageManager");
             this.anim = this.getComponent(cc.Animation);
-            this.animState = this.anim.getClips();
-            this.animState[1].speed = this.ATKSpeed;
+            this.animState = this.anim.play('Attack');
+            this.animState.speed = this.ATKSpeed;
+            //this.anim.setCurrentTime(this.ATKSpeed,'Attack');
+
             this.schedule(function() {
                 this.BasicAttack();
             }, 1/this.ATKSpeed);
@@ -57,14 +59,14 @@ cc.Class({
     BasicAttack() {
          this.anim.play('Attack');
          this.GiveEnemyDamage((this.ATKDmg + this.getRandom(-1,1)));
-        if(this.IsAlly)
-        {
-            cc.log("Allyattacked","EnemyHP",this.EnemyCharacter.HP);
-        }
-        else if(!this.IsAlly)
-        {
-            cc.log("Enemyattacked","AllyHP",this.EnemyCharacter.HP);
-        }
+        // if(this.IsAlly)
+        // {
+        //     cc.log("Allyattacked","EnemyHP",this.EnemyCharacter.HP);
+        // }
+        // else if(!this.IsAlly)
+        // {
+        //     cc.log("Enemyattacked","AllyHP",this.EnemyCharacter.HP);
+        // }
 
     },
     getRandom(min, max) {
@@ -75,7 +77,7 @@ cc.Class({
         {
             // Crit 
             this.EnemyCharacter.SetHP(this.EnemyCharacter.HP - Damage * this.CritDmg/100);
-            this.DamageManger.ShowDamage(Damage *this.CritDmg/100,true);
+            this.DamageManger.ShowDamage(Damage * this.CritDmg/100, true);
         }
         else
         {   
@@ -87,8 +89,8 @@ cc.Class({
     },
     SetHP(value)
     {
-        this.HealthBar.UpdateHealthBar();
         this.HP = value;
+        this.HealthBar.UpdateHealthBar();
     },
 
     // update (dt) {},

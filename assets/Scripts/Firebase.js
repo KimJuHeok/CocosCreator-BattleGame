@@ -15,7 +15,7 @@ cc.Class({
     js.type = "text/javascript";
     js.src = jsFilePath;  
     document.head.appendChild(js);
-},
+    },
 
     start () {
         var config = {
@@ -27,8 +27,7 @@ cc.Class({
             messagingSenderId: "827702185283"
           };
           firebase.initializeApp(config);
-          window.FireBaseDB = firebase.database();
-        
+          window.g_FireBaseDB = firebase.database();
     },
 
     // update (dt) {},

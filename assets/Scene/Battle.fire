@@ -15,6 +15,9 @@
     "_children": [
       {
         "__id__": 2
+      },
+      {
+        "__id__": 64
       }
     ],
     "_active": true,
@@ -41,8 +44,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.26510416666666664,
-      "y": 0.26510416666666664,
+      "x": 6.671068208242217,
+      "y": 6.671068208242217,
       "z": 1
     },
     "_quat": {
@@ -1360,8 +1363,8 @@
     },
     "_enabled": true,
     "HP": 150,
-    "ATKSpeed": 3,
-    "ATKDmg": 5,
+    "ATKSpeed": 4,
+    "ATKDmg": 40,
     "CritPer": 10,
     "CritDmg": 110,
     "IsAlly": true,
@@ -1903,7 +1906,7 @@
     "_enabled": true,
     "HP": 150,
     "ATKSpeed": 1,
-    "ATKDmg": 15,
+    "ATKDmg": 11,
     "CritPer": 30,
     "CritDmg": 110,
     "IsAlly": false,
@@ -2401,5 +2404,93 @@
       "__id__": 56
     },
     "_id": "f1AJvEuxJNZqh7Efw4Qdhp"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "label",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [],
+    "_active": true,
+    "_level": 1,
+    "_components": [
+      {
+        "__id__": 65
+      }
+    ],
+    "_prefab": null,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 36,
+      "height": 40
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": -343,
+      "y": 1200,
+      "z": 0
+    },
+    "_scale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_quat": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_zIndex": 0,
+    "groupIndex": 0,
+    "_id": "e4l4QrjF9KqJ+OyWLFhl+f"
+  },
+  {
+    "__type__": "cc.Label",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 64
+    },
+    "_enabled": true,
+    "_srcBlendFactor": 1,
+    "_dstBlendFactor": 771,
+    "_useOriginalSize": false,
+    "_string": "012353",
+    "_N$string": "012353",
+    "_fontSize": 40,
+    "_lineHeight": 40,
+    "_enableWrapText": true,
+    "_N$file": {
+      "__uuid__": "d89ff1f0-8fb3-4a82-a94f-fb51367d04e9"
+    },
+    "_isSystemFontUsed": false,
+    "_spacingX": 0,
+    "_N$horizontalAlign": 1,
+    "_N$verticalAlign": 1,
+    "_N$fontFamily": "Arial",
+    "_N$overflow": 0,
+    "_id": "31AeiACL1IN4EQy3mspyua"
   }
 ]

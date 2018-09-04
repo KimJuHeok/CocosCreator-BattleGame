@@ -30,6 +30,7 @@ cc.Class({
         this.AllyComponent = this.Ally.getComponent("CharacterBase");
         this.EnemyComponent = this.Enemy.getComponent("CharacterBase");
         this.WinnerLabel = this.maskLayer.getChildByName("WinnerLabel");
+        g_FireBaseDB.ref("Result").on('value',snap => console.log(snap.val()));
 
     },
 
@@ -38,14 +39,14 @@ cc.Class({
          {
              this.maskLayer.active = true;
              this.WinnerLabel.getComponent(cc.Label).string = "Player 2!";
-             FireBaseDB.ref("Player1").child("Text").set("Fail");
+             g_FireBaseDB.ref("Result").child("Text").set("zxcvasa");
              cc.game.pause();
          }
          if( this.EnemyComponent.HP < 0 )
          {   
             this.maskLayer.active = true;
             this.WinnerLabel.getComponent(cc.Label).string = "Player 1!";
-            FireBaseDB.ref("Player2").child("Text").set("Win");
+            g_FireBaseDB.ref("Result").child("Text").set("xxasdfxb");
             cc.game.pause();
          }
      },
